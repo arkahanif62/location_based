@@ -8,37 +8,16 @@
 <body>
   <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false" renderer="antialias: true; alpha: true">
     <a-camera gps-camera="gpsMinDistance: 5"></a-camera>
-
-    <!-- Lokasi Gambar 1.jpg -->
-    <a-image
-      gps-entity-place="latitude: 5.558860453409361; longitude: 95.34006401412982;"
-      src="PATH_TO_YOUR_IMAGES/1.jpg"
-      scale="3 3"
-    ></a-image>
-    <a-text
-      gps-entity-place="latitude: 5.558860453409361; longitude: 95.34006401412982;"
-      value="Lokasi Gambar 1"
-      align="center"
-      position="0 5 0"
-      color="white"
-      scale="4 4"
-    ></a-text>
-
-    <!-- Lokasi Gambar 2.jpg -->
-    <a-image
-      gps-entity-place="latitude: 5.558890123456789; longitude: 95.340123987654321;"
-      src="PATH_TO_YOUR_IMAGES/2.jpg"
-      scale="3 3"
-    ></a-image>
-    <a-text
-      gps-entity-place="latitude: 5.558890123456789; longitude: 95.340123987654321;"
-      value="Lokasi Gambar 2"
-      align="center"
-      position="0 5 0"
-      color="white"
-      scale="4 4"
-    ></a-text>
-
+    
+    <!-- 3D Terrain Model -->
+    <a-gltf-model 
+      gps-entity-place="latitude: YOUR_LATITUDE; longitude: YOUR_LONGITUDE;" 
+      src="PATH_TO_YOUR_TERRAIN_MODEL.gltf" 
+      scale="0.1 0.1 0.1"
+    ></a-gltf-model>
+    
+    <!-- You can add more 3D objects here as needed -->
+    <!-- Example: <a-box gps-entity-place="latitude: LATITUDE; longitude: LONGITUDE;" position="0 0 0" color="red"></a-box> -->
   </a-scene>
 </body>
 </html>
